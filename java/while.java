@@ -5,7 +5,6 @@ class Main {
         int x = 1;
         Scanner leer = new Scanner (System.in);
         
-        /*
         while(x != 0){
             System.out.println("Ingrese un número: ");
             x = leer.nextInt();
@@ -15,11 +14,5 @@ class Main {
             }
             
         }
-        */
-        
-        
-        do{
-            
-        }while();
     }
 }
