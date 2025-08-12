@@ -1,7 +1,7 @@
 package com.curso.peliJV.modelos;
 import java.util.*;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
 
     //Decalracion de atributos
     private String nombre;
@@ -52,6 +52,11 @@ public class Titulo {
         this.total_ev = total_ev;
     }
 
+    public Titulo(String nombre, int lanzamiento) {
+        this.nombre = nombre;
+        this.lanzamiento = lanzamiento;
+    }
+
     //Objeto de informacion de pelicula
     public void Informacion(){
         System.out.println("-".repeat(20));
@@ -73,5 +78,10 @@ public class Titulo {
     //Clase de calcular media
     public double media(){
         return suma / total_ev;
+    }
+
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.get_Nombre().compareTo(otroTitulo.get_Nombre());
     }
 }

@@ -6,6 +6,10 @@ public class Serie extends Titulo{
     //Declaracion de tipos de variables
     int temporadas, episodios, minutos;
 
+    public Serie(String nombre, int lanzamiento) {
+        super(nombre, lanzamiento);
+    }
+
     @Override
     public int get_Duracion(){
         return temporadas * episodios * minutos;

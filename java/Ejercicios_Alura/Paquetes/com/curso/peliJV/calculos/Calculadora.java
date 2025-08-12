@@ -13,6 +13,7 @@ public class Calculadora {
     }
 
     public void incluye(Titulo titulo){
+        System.out.println("Duracion en mitulos de: " + titulo);
         this.tiempo_total += titulo.get_Duracion();
     }
 }

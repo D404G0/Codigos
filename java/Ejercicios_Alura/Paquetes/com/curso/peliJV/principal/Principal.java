@@ -1,9 +1,8 @@
-//Importacion de todas las librerias
+package com.curso.peliJV.principal;//Importacion de todas las librerias
 
 import com.curso.peliJV.calculos.Recomendacion;
 import com.curso.peliJV.modelos.Episodio;
 import com.curso.peliJV.modelos.Pelicula;
-import com.curso.peliJV.modelos.Titulo;
 import com.curso.peliJV.modelos.Serie;
 import com.curso.peliJV.calculos.Calculadora;
 
@@ -19,10 +18,7 @@ public class Principal {
         Episodio episodio = new Episodio();
 
         //Declaracion de objetos usando los atributos del otro paquete 1
-        Pelicula primera_pelicula = new Pelicula();
-
-        primera_pelicula.set_Nombre("harry Potter");
-        primera_pelicula.set_Lanzamiento(2000);
+        Pelicula primera_pelicula = new Pelicula("harry Potter", 2000);
         primera_pelicula.set_Duracion(120);
         primera_pelicula.set_Incluido(true);
 
@@ -38,8 +34,7 @@ public class Principal {
 
 
         //Declaracion de objetos usando los atributos del otro paquete 1
-        Serie Stranger = new Serie();
-        Stranger.set_Nombre("Stranger Things");
+        Serie Stranger = new Serie("Stranger Things", 2020);
         Stranger.set_Lanzamiento(2020);
         Stranger.set_Incluido(true);
 
@@ -65,5 +60,19 @@ public class Principal {
         calculadora.incluye(primera_pelicula);
         calculadora.incluye(Stranger);
         System.out.println("Duracion total de maraton : " + calculadora.get_tiempo_total());
+
+        var terminator = new Pelicula("Terminator.", 2000);
+        terminator.set_Duracion(180);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(primera_pelicula);
+        listaDePeliculas.add(terminator);
+
+        System.out.println("Tamaño de lista: " + listaDePeliculas.size());
+        System.out.println("Primera pelicula: " + listaDePeliculas.get(0).get_Nombre());
+        System.out.println(listaDePeliculas);
+        System.out.println("ToString de la pelicula: " + listaDePeliculas.get(0).toString());
+
+
     }
 }
